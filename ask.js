@@ -21,4 +21,12 @@ process.stdin.on('data', function (data) {
   }
 });
 
+process.on('exit', function () {
+  process.stdout.write("\n\n\n\n");
+
+  process.stdout.write(`Go ${answers[1]} ${answers[0]} you can finish writing ${answers[2]} later`);
+
+  process.stdout.write("\n\n\n\n");
+});
+
 ask(0);
