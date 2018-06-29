@@ -11,4 +11,8 @@ function ask(i) {
   process.stdout.write("  >  ");
 }
 
+process.stdin.on('data', function (data) {
+  process.stdout.write('\n' + data.toString().trim() + '\n');
+});
+
 ask(0);
