@@ -7,8 +7,8 @@ var questions = [
 var answers = [];
 
 function ask(i) {
-  process.stdout.write("Hello");
-  process.stdout.write("World \n\n\n\n");
+  process.stdout.write(`\n\n\n\n ${questions[i]}`);
+  process.stdout.write("  >  ");
 }
 
 ask(0);
