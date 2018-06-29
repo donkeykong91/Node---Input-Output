@@ -12,7 +12,13 @@ function ask(i) {
 }
 
 process.stdin.on('data', function (data) {
-  process.stdout.write('\n' + data.toString().trim() + '\n');
+  answers.push(data.toString().trim());
+
+  if (answers.length < questions.length) {
+    ask(answers.length);
+  } else {
+    process.exit();
+  }
 });
 
 ask(0);
